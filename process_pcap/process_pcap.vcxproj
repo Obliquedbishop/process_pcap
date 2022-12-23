@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClCompile Include="GlobalHeader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils.cpp" />
     <ClCompile Include="vlp16_packet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GlobalHeader.h" />
+    <ClInclude Include="utils.h" />
     <ClInclude Include="vlp16_packet.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

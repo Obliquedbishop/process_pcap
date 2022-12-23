@@ -32,6 +32,7 @@ int main(int argc, char* argv[])
     while (result = pcap_next_ex(handle, &packet_header, &packet_data) > 0) {
         
         Packet pckt(packet_header, packet_data, packet_count);
+        pckt.debug_packet_data();
 
         packet_count++;
     }
