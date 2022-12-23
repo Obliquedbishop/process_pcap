@@ -17,9 +17,15 @@
     <ClCompile Include="GlobalHeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vlp16_packet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GlobalHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vlp16_packet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

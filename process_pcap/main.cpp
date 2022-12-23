@@ -1,18 +1,11 @@
 #include <iostream>
-#include "pcap.h"
-#include "GlobalHeader.h"
 #include <string.h>
 
+#include "pcap.h"
+#include "GlobalHeader.h"
+#include "vlp16_packet.h"
+
 using namespace std;
-
-
-void debug_packet_header(pcap_pkthdr* packet_header, int packet_count) {
-    cout << "Packet Header of packet having count: " << packet_count << endl;
-    cout << "caplen " << packet_header->caplen << endl;
-    cout << "actual length of packet " << packet_header->len << endl;
-    cout << "timestamp of packet " << packet_header->ts.tv_sec << " " << packet_header->ts.tv_usec << endl;
-    cin.get();
-}
 
 int main(int argc, char* argv[])
 {
@@ -29,7 +22,6 @@ int main(int argc, char* argv[])
 
     // Reading the global header
     pcap_global_header global_header = get_global_header(file_name);
-    //print_global_header(global_header);
 
     // Reading the data packets
     struct pcap_pkthdr* packet_header;
@@ -38,10 +30,9 @@ int main(int argc, char* argv[])
     int result = 0;
     
     while (result = pcap_next_ex(handle, &packet_header, &packet_data) > 0) {
+        
+        Packet pckt(packet_header, packet_data, packet_count);
 
-        //debug_packet_header(packet_header, packet_count);
-
-        // Carry all the processing on pcap_pkthdr and packet_data
         packet_count++;
     }
     
