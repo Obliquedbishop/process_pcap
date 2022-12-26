@@ -14,7 +14,6 @@ pcap_global_header get_global_header(const char* file_name) {
     pcap_global_header global_header;
 
     // Read the global header to a buffer
-
     char* buffer = new char[sizeof(pcap_global_header)];
 
 

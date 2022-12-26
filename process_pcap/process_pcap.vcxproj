@@ -19,15 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataBlock.cpp" />
     <ClCompile Include="GlobalHeader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utils.cpp" />
-    <ClCompile Include="vlp16_packet.cpp" />
+    <ClCompile Include="DataPacket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DataBlock.h" />
     <ClInclude Include="GlobalHeader.h" />
     <ClInclude Include="utils.h" />
-    <ClInclude Include="vlp16_packet.h" />
+    <ClInclude Include="DataPacket.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

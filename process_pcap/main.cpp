@@ -3,7 +3,9 @@
 
 #include "pcap.h"
 #include "GlobalHeader.h"
-#include "vlp16_packet.h"
+#include "DataPacket.h"
+
+#include <vector>
 
 using namespace std;
 
@@ -29,12 +31,19 @@ int main(int argc, char* argv[])
     u_int packet_count = 0;
     int result = 0;
     
+    vector<uint16_t> distance;
+    vector<uint16_t> intensity;
+
+
     while (result = pcap_next_ex(handle, &packet_header, &packet_data) > 0) {
         
-        Packet pckt(packet_header, packet_data, packet_count);
-        pckt.debug_packet_data();
-
+        DataPacket pckt(packet_header, packet_data, packet_count, distance, intensity);
+        //pckt.debug_packet_header();
+        //cout << packet_count << endl;
         packet_count++;
+        if (packet_count % 10000 == 0) {
+            std::cout << packet_count << std::endl;
+        }
     }
     
     

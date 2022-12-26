@@ -17,10 +17,13 @@
     <ClCompile Include="GlobalHeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vlp16_packet.cpp">
+    <ClCompile Include="DataPacket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -28,10 +31,13 @@
     <ClInclude Include="GlobalHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vlp16_packet.h">
+    <ClInclude Include="DataPacket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
